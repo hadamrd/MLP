@@ -60,14 +60,13 @@ class MLP
 			double sum;
 			for(int i=0; i<nRows; i++)
 			{
-				sum=0;
+				sum=b[i];
 				for(int j=0; j<nCols; j++)
 				{
-					sum += M[i][j]*v[j]+b[j];
+					sum += M[i][j]*v[j];
 
 				}
 				res.push_back(sum);
-				cout<<"A"<<endl;
 				ares.push_back(a(sum));
 			}
 
